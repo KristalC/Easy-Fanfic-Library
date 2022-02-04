@@ -132,12 +132,12 @@ To record a 5th series:
 3. Add "{#series5:|,|}" to the end of the template for the #seriesall column.
 4. Go to the FanFicFare drop-down menu and select "Configure FanFicFare". Navigate to the "personal.ini" tab and select the "Edit personal.ini" option.
 5. In the personal.ini file, under "[archiveofourown.org]", at the end of items under "extra_valid_entries:", add ",series04,series04Url,series04HTML".
-6. In the personal.ini file, under "[archiveofourown.org]", at the end of items under "make_linkhtml\*_\*entries:", add ",series04"
-7. In the personal.ini file, under "[archiveofourown.org]", at the end of lines under "custom_columns\*_\*settings:", add the line " series04=>#series5".
+6. In the personal.ini file, under "[archiveofourown.org]", at the end of items under "make_linkhtml_entries:", add ",series04"
+7. In the personal.ini file, under "[archiveofourown.org]", at the end of lines under "custom_columns_settings:", add the line " series04=>#series5".
 
 To record an additional series after that:
 
-1. Repeat the steps for recording a 5th series, but now make the new column lookup name #series6, add "{#series6:|,|}" to the end of the template for the #seriesall column, add ",series05,series05Url,series05HTML" under "extra*valid*entries: in personal.ini, add ",series05" under "make_linkhtml\**entries:" in personal.ini, and add ",series05=>#series6" under "custom_columns*\*settings:" in personal.ini.
+1. Repeat the steps for recording a 5th series, but now make the new column lookup name #series6, add "{#series6:|,|}" to the end of the template for the #seriesall column, add ",series05,series05Url,series05HTML" under "extra_valid_entries: in personal.ini, add ",series05" under "make_linkhtml_entries:" in personal.ini, and add ",series05=>#series6" under "custom_columns_settings:" in personal.ini.
 
 Follow this pattern for any further additional series columns desired.
 
@@ -145,7 +145,7 @@ Follow this pattern for any further additional series columns desired.
 
 ## General Resources
 
-If you are having issues with the Easy Fanfic Library and wish to ask questions or leave feedback, please submit feedback on GitHub (<https://github.com/KristalC/Fanfic-Library-Easy-Setup/issues>) through the feedback form (<https://forms.gle/h2KXYeDXaDDvsSky5>). Before you do so, please look over the common issues below. In addition, please try to be sure that your issue is with the sample library itself, not with Calibre or its plugins.
+If you are having issues with the Easy Fanfic Library and wish to ask questions or leave feedback, please submit feedback on GitHub (<https://github.com/KristalC/Fanfic-Library-Easy-Setup/issues>) or through the feedback form (<https://forms.gle/h2KXYeDXaDDvsSky5>). Before you do so, please look over the common issues below. In addition, please try to be sure that your issue is with the sample library itself, not with Calibre or its plugins.
 
 The following resources may also be of use.
 
