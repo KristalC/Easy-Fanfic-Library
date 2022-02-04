@@ -37,7 +37,7 @@ This project makes use of existing tools (the Calibre application, FanFicFare pl
     * Most fanfiction metadata will be sent to the appropriate columns/fields with these settings.
   * customized AO3 settings in the FanFicFare personal.ini file
     * Every type of metadata included in AO3 works is pre-configured to be sent to the correct columns/fields in Calibre.
-    * See **"FanFicFare Configuration personal.ini Additions"**
+    * See **"FanFicFare Configuration personal.ini Additions"** and the [personal.ini settings.txt](https://github.com/KristalC/Easy-Fanfic-Library/blob/main/personal.ini%20settings.txt) file.
     * In the FanFicFare configuration personal.ini file, any code added by the Easy Fanfic Library project will be marked as "Easy Fanfic Library code". Any of the comments added by the Easy Fanfic Library project will be marked as “Easy Fanfic Library notes" or placed within "Easy Fanfic Library code". The remaining code comes from the FanFicFare plugin-defaults.ini file and its copyright belongs to FanFicFare contributors.
 * EpubMerge plugin, which will automatically add anthology options to FanFicFare
 
