@@ -89,6 +89,7 @@ This project makes use of existing tools (the Calibre application, FanFicFare pl
 3. Import the sample library into Calibre.
    * You may be offered this option automatically when you open Calibre the first time.
    * Alternatively, once you are in the Calibre program, you can select the library drop-down menu, "Export/import all calibre data", "Import previously selected data", and then choose the library data file you downloaded.
+   * If you already have data in Calibre, it would be a good idea to export your Calibre data before importing the sample library template as a new library, as some users have reported that importing the new library erased their pre-existing Calibre configurations. 
 4. (Optional) Personalize the columns in Calibre.
    * To personalize which columns are displayed, the order in which the columns are displayed, and to add any additional columns of your own, you may select the "Preferences" drop-down menu, then "Change calibre behavior", and then "Add your own columns". This will open the columns menu.
    * You can add additional series columns, if desired. The default settings will record series data from up to four series for any work on AO3. If you wish to record additional series data on works which are included in more than four series, you must add additional series columns. The process is described in **"Instructions to Record More Than 4 Series Fields"**.
