@@ -182,14 +182,16 @@ The sample settings should correctly add the metadata to any columns which are n
 
 # FanFicFare personal.ini Additions
 
-Below are the major additions to the personal.ini file in the Easy Fanfic Library. The complete personal.ini settings can be found in the [personal.ini settings file](personal.ini%20settings.txt?fileId=18701282).
+Below are the major additions to the personal.ini file in the Easy Fanfic Library. The complete personal.ini settings can be found in the personal.ini settings file.
 
+```
      [defaults]
      ## BEGIN Fanfic Library Easy Setup code 
      ## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3 (for works downloaded from sites other than AO3).
      titlepage_entries: publisher,rating,warnings,ships,characters,category,genre,language,seriesHTML,datePublished,dateUpdated,dateCreated,numWords,numChapters,status,description
      ## END Fanfic Library Easy Setup code
-
+```
+```
      # The following section under the [archiveofourown.org] header
      # was adapted for the Easy Fanfic Library project.
      # Adapted from the plugin-defaults.ini file available on
@@ -296,9 +298,9 @@ Below are the major additions to the personal.ini file in the Easy Fanfic Librar
      ## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3.
      titlepage_entries: publisher,rating,warnings,ao3categories,fandoms,ships,characters,freeformtags,language,series00HTML,series01HTML,series02HTML,series03HTML,collections,datePublished,dateUpdated,dateCreated,numWords,numChapters,chapterslashtotal,status,comments,kudos,bookmarks,hits,restricted,description,bookmarked,bookmarktags,bookmarksummary,bookmarkprivate,bookmarkrec
      ## END Easy Fanfic Library code
-
-     ...
-
+```
+    
+```
      ## BEGIN Easy Fanfic Library code
      ## This populates the custom columns from the sample library with AO3 metadata.
      custom_columns_settings:
@@ -344,4 +346,4 @@ Below are the major additions to the personal.ini file in the Easy Fanfic Librar
       series03=>#series4
      ## If you are using more than 4 series columns, add additional lines here.
      ## END Easy Fanfic Library code
-     ```
+ ```
