@@ -185,165 +185,169 @@ The sample settings should correctly add the metadata to any columns which are n
 Below are the major additions to the personal.ini file in the Easy Fanfic Library. The complete personal.ini settings can be found in the personal.ini settings file.
 
 ```
-     [defaults]
-     ## BEGIN Fanfic Library Easy Setup code 
-     ## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3 (for works downloaded from sites other than AO3).
-     titlepage_entries: publisher,rating,warnings,ships,characters,category,genre,language,seriesHTML,datePublished,dateUpdated,dateCreated,numWords,numChapters,status,description
-     ## END Fanfic Library Easy Setup code
+[defaults]
+## BEGIN Fanfic Library Easy Setup code 
+## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3 (for works downloaded from sites other than AO3).
+titlepage_entries: publisher,rating,warnings,ships,characters,category,genre,language,seriesHTML,datePublished,dateUpdated,dateCreated,numWords,numChapters,status,description
+## END Fanfic Library Easy Setup code
 ```
 ```
-     # The following section under the [archiveofourown.org] header
-     # was adapted for the Easy Fanfic Library project.
-     # Adapted from the plugin-defaults.ini file available on
-     # the personal.ini tab of the FanFicFare plugin configuration.
-     # plugin-defaults.ini copyright 2015 Fanficdownloader team, 2021 FanFicFare team
-     #
-     # Licensed under the Apache License, Version 2.0 (the "License");
-     # you may not use this file except in compliance with the License.
-     # You may obtain a copy of the License at
-     #
-     #     http://www.apache.org/licenses/LICENSE-2.0
-     #
-     # Unless required by applicable law or agreed to in writing, software
-     # distributed under the License is distributed on an "AS IS" BASIS,
-     # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     # See the License for the specific language governing permissions and
-     # limitations under the License.
+# The following section under the [archiveofourown.org] header
+# was adapted for the Easy Fanfic Library project.
+# Adapted from the plugin-defaults.ini file available on
+# the personal.ini tab of the FanFicFare plugin configuration.
+# plugin-defaults.ini copyright 2015 Fanficdownloader team, 2021 FanFicFare team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-     [archiveofourown.org]
-     ...
-     #username:XXXXXXXX
-     #password:XXXXXXXX
-     ## BEGIN Easy Fanfic Library Notes
-     ## Saving your AO3 login will enable the program to access
-     ## information from your bookmarks and save it to the appropriate
-     ## custom columns. It will also enable the program to access any
-     ## stories which require login, without having to prompt you. If you
-     ## wish to save your login, add your username and password to the above 
-     ## lines, and uncomment them. If you don't wish to be logged in,
-     ## keep the username and password lines commented out.
-     ## END Easy Fanfic Library Notes
+[archiveofourown.org]
+use_basic_cache:true
+## Some sites require login (or login for some rated stories) The
+## program can prompt you, or you can save it in config.  In
+## commandline version, this should go in your personal.ini, not
+## defaults.ini.
+#username:XXXXXXXX
+#password:XXXXXXXX
+## BEGIN Easy Fanfic Library Notes
+## Saving your AO3 login will enable the program to access
+## information from your bookmarks and save it to the appropriate
+## custom columns. It will also enable the program to access any
+## stories which require login, without having to prompt you. If you
+## wish to save your login, add your username and password to the above 
+## lines, and uncomment them. If you don't wish to be logged in,
+## keep the username and password lines commented out.
+## END Easy Fanfic Library Notes
 
-     ## In order to get bookmarktags and bookmarksummary, you need to login
-     ## all the time.  This defaults to off to save time and network
-     ## traffic.  Requires valid AO3 username and password when true.
-     #always_login:true
-     ## BEGIN Easy Fanfic Library Notes
-     ## If you wish to include information from your bookmarks in your 
-     ## library, or to be able to retrieve an entire page of your 
-     ## bookmarked works at once, uncomment the line "always_login:true" 
-     ## above. If you don't wish to retrieve bookmark information,
-     ## keep the line commented out. 
-     ## END Easy Fanfic Library Notes
+## In order to get bookmarktags and bookmarksummary, you need to login
+## all the time.  This defaults to off to save time and network
+## traffic.  Requires valid AO3 username and password when true.
+#always_login:true
+## BEGIN Easy Fanfic Library Notes
+## If you wish to include information from your bookmarks in your 
+## library, or to be able to retrieve an entire page of your 
+## bookmarked works at once, uncomment the line "always_login:true" 
+## above. If you don't wish to retrieve bookmark information,
+## keep the line commented out. 
+## END Easy Fanfic Library Notes
 
-     ## Some sites also require the user to confirm they are adult for
-     ## adult content.  In commandline version, this should go in your
-     ## personal.ini, not defaults.ini.
-     #is_adult:true
-     ## Easy Fanfic Library Notes: If you are an adult, uncomment the above line.
+## Some sites also require the user to confirm they are adult for
+## adult content.  In commandline version, this should go in your
+## personal.ini, not defaults.ini.
+#is_adult:true
+## Easy Fanfic Library Notes: If you are an adult, uncomment the above line.
 
-     ## Some adapters collect additional meta information beyond the
-     ## standard ones.  They need to be defined in extra_valid_entries to
-     ## tell the rest of the FanFicFare system about them.  They can be
-     ## used in include_subject_tags, titlepage_entries,
-     ## extra_titlepage_entries, logpage_entries, extra_logpage_entries,
-     ## and include_in_* config items.  You can also add additional entries
-     ## here to build up composite metadata entries.
-     ## archiveofourown.org, for example, fills genre (a standard
-     ## entry) as the composite offreeformtags, ao3categories in
-     ## include_in_genre.  If there's ever more than 4 series, add
-     ## series04,series04Url etc.
-     extra_valid_entries:fandoms, freeformtags, freefromtags,
-      ao3categories, comments, chapterslashtotal, chapterstotal, kudos,
-      hits, bookmarks, collections, byline, bookmarked, bookmarktags,
-      bookmarksummary, bookmarkprivate, bookmarkrec, restricted, series00,
-      series01, series02, series03, series00Url, series01Url, series02Url,
-      series03Url, series00HTML, series01HTML, series02HTML, series03HTML
-     fandoms_label:Fandoms
-     freeformtags_label:Freeform Tags
-     freefromtags_label:Freeform Tags
-     ao3categories_label:AO3 Categories
-     comments_label:Comments
-     chapterslashtotal_label:Chapters/Total Chapters
-     chapterstotal_label:Total Chapters
-     kudos_label:Kudos
-     hits_label:Hits
-     collections_label:Collections
-     ## Count of bookmarks on story by all users
-     bookmarks_label:Bookmarks
-     ## Tags & Summary from *your* bookmark on the story.  Only collected
-     ## if always_login:true
-     bookmarked_label:Bookmarked
-     bookmarktags_label:Bookmark Tags
-     bookmarksummary_label:Bookmark Summary
-     bookmarkprivate_label:Bookmark Private
-     bookmarkrec_label:Bookmark Rec
-     restricted_label:Restricted to Registered Users
-     series00HTML_label:Series
-     series01HTML_label:Additional Series
-     series02HTML_label:Additional Series
-     series03HTML_label:Additional Series
+## Some adapters collect additional meta information beyond the
+## standard ones.  They need to be defined in extra_valid_entries to
+## tell the rest of the FanFicFare system about them.  They can be
+## used in include_subject_tags, titlepage_entries,
+## extra_titlepage_entries, logpage_entries, extra_logpage_entries,
+## and include_in_* config items.  You can also add additional entries
+## here to build up composite metadata entries.
+## archiveofourown.org, for example, fills genre (a standard
+## entry) as the composite offreeformtags, ao3categories in
+## include_in_genre.  If there's ever more than 4 series, add
+## series04,series04Url etc.
+extra_valid_entries:fandoms, freeformtags, freefromtags,
+ ao3categories, comments, chapterslashtotal, chapterstotal, kudos,
+ hits, bookmarks, collections, byline, bookmarked, bookmarktags,
+ bookmarksummary, bookmarkprivate, bookmarkrec, restricted, series00,
+ series01, series02, series03, series00Url, series01Url, series02Url,
+ series03Url, series00HTML, series01HTML, series02HTML, series03HTML
+fandoms_label:Fandoms
+freeformtags_label:Freeform Tags
+freefromtags_label:Freeform Tags
+ao3categories_label:AO3 Categories
+comments_label:Comments
+chapterslashtotal_label:Chapters/Total Chapters
+chapterstotal_label:Total Chapters
+kudos_label:Kudos
+hits_label:Hits
+collections_label:Collections
+## Count of bookmarks on story by all users
+bookmarks_label:Bookmarks
+## Tags & Summary from *your* bookmark on the story.  Only collected
+## if always_login:true
+bookmarked_label:Bookmarked
+bookmarktags_label:Bookmark Tags
+bookmarksummary_label:Bookmark Summary
+bookmarkprivate_label:Bookmark Private
+bookmarkrec_label:Bookmark Rec
+restricted_label:Restricted to Registered Users
+series00HTML_label:Series
+series01HTML_label:Additional Series
+series02HTML_label:Additional Series
+series03HTML_label:Additional Series
 
-     ## Assume entryUrl, apply to "<a class='%slink' href='%s'>%s</a>" to
-     ## make entryHTML.
-     make_linkhtml_entries:series00,series01,series02,series03
+## Assume entryUrl, apply to "<a class='%slink' href='%s'>%s</a>" to
+## make entryHTML.
+make_linkhtml_entries:series00,series01,series02,series03
 
-     ## BEGIN Easy Fanfic Library code 
-     ## This replaces any total chapter count which contains a noninteger 
-     ## with an empty field. This way, all total chapter counts will be integers, 
-     ## as the column requires, or or left blank.
-     replace_metadata:
-      chapterstotal=>[0-9]*[^0-9]+[0-9]*=>
+## BEGIN Easy Fanfic Library code 
+## This replaces any total chapter count which contains a noninteger 
+## with an empty field. This way, all total chapter counts will be integers, 
+## as the column requires, or or left blank.
+replace_metadata:
+ chapterstotal=>[0-9]*[^0-9]+[0-9]*=>
 
-     ## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3.
-     titlepage_entries: publisher,rating,warnings,ao3categories,fandoms,ships,characters,freeformtags,language,series00HTML,series01HTML,series02HTML,series03HTML,collections,datePublished,dateUpdated,dateCreated,numWords,numChapters,chapterslashtotal,status,comments,kudos,bookmarks,hits,restricted,description,bookmarked,bookmarktags,bookmarksummary,bookmarkprivate,bookmarkrec
-     ## END Easy Fanfic Library code
+## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3.
+titlepage_entries: publisher,rating,warnings,ao3categories,fandoms,ships,characters,freeformtags,language,series00HTML,series01HTML,series02HTML,series03HTML,collections,datePublished,dateUpdated,dateCreated,numWords,numChapters,chapterslashtotal,status,comments,kudos,bookmarks,hits,restricted,description,bookmarked,bookmarktags,bookmarksummary,bookmarkprivate,bookmarkrec
+## END Easy Fanfic Library code
 ```
     
 ```
-     ## BEGIN Easy Fanfic Library code
-     ## This populates the custom columns from the sample library with AO3 metadata.
-     custom_columns_settings:
-     ## These first few lines of metadata are not AO3-specific, but I've
-     ## included the column settings here for easy setup. If you will be 
-     ## downloading from any other sites, you may want to assign metadata for 
-     ## these custom columns in FanFicFare's Custom Columns configuration tab. 
-      characters=>#characters
-      ships=>#relationships
-      rating=>#maturityrating
-      warnings=>#warnings
-      numChapters=>#currentchapters
-      numWords=>#wordcount
-      status=>#status
-      datePublished=>#dateposted
-      dateUpdated=>#dateupdated
-     ## The following lines deal with the AO3-specific metadata. 
-      fandoms=>#fandom
-      freeformtags=>#additionaltags
-     ## Original freeformtags label had a typo- this ensures compatibility.
-      freefromtags=>#additionaltags
-      ao3categories=>#category
-      comments=>#comments
-      chapterslashtotal=>#chapterslashtotal
-      chapterstotal=>#totalchapters
-      kudos=>#kudos
-      hits=>#hits
-      bookmarks=>#bookmarks
-      collections=>#collection
-      restricted=>#restricted
-     ## Information about your bookmark, if you are logged in.
-      bookmarked=>#bookmarked
-      bookmarktags=>#bookmarktags
-      bookmarksummary=>#bookmarksummary
-      bookmarkprivate=>#bookmarkprivate
-      bookmarkrec=>#bookmarkrec
-     ## Add a "fanfiction" tag to the genre column for every work from AO3.
-      "FanFiction"=>#genre 
-     ## Record series information.
-      series00=>#series1
-      series01=>#series2
-      series02=>#series3
-      series03=>#series4
-     ## If you are using more than 4 series columns, add additional lines here.
-     ## END Easy Fanfic Library code
+## BEGIN Easy Fanfic Library code
+## This populates the custom columns from the sample library with AO3 metadata.
+custom_columns_settings:
+## These first few lines of metadata are not AO3-specific, but I've
+## included the column settings here for easy setup. If you will be 
+## downloading from any other sites, you may want to assign metadata for 
+## these custom columns in FanFicFare's Custom Columns configuration tab. 
+ characters=>#characters
+ ships=>#relationships
+ rating=>#maturityrating
+ warnings=>#warnings
+ numChapters=>#currentchapters
+ numWords=>#wordcount
+ status=>#status
+ datePublished=>#dateposted
+ dateUpdated=>#dateupdated
+## The following lines deal with the AO3-specific metadata. 
+ fandoms=>#fandom
+ freeformtags=>#additionaltags
+## Original freeformtags label had a typo- this ensures compatibility.
+ freefromtags=>#additionaltags
+ ao3categories=>#category
+ comments=>#comments
+ chapterslashtotal=>#chapterslashtotal
+ chapterstotal=>#totalchapters
+ kudos=>#kudos
+ hits=>#hits
+ bookmarks=>#bookmarks
+ collections=>#collection
+ restricted=>#restricted
+## Information about your bookmark, if you are logged in.
+ bookmarked=>#bookmarked
+ bookmarktags=>#bookmarktags
+ bookmarksummary=>#bookmarksummary
+ bookmarkprivate=>#bookmarkprivate
+ bookmarkrec=>#bookmarkrec
+## Add a "fanfiction" tag to the genre column for every work from AO3.
+ "FanFiction"=>#genre 
+## Record series information.
+ series00=>#series1
+ series01=>#series2
+ series02=>#series3
+ series03=>#series4
+## If you are using more than 4 series columns, add additional lines here.
+## END Easy Fanfic Library code
  ```
