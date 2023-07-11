@@ -1,12 +1,6 @@
 ## This is an example of what your personal configuration might look
 ## like.  Uncomment options by removing the '#' in front of them.
 
-[defaults]
-## BEGIN Fanfic Library Easy Setup code 
-## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3 (for works downloaded from sites other than AO3).
-titlepage_entries: publisher,rating,warnings,ships,characters,category,genre,language,seriesHTML,datePublished,dateUpdated,dateCreated,numWords,numChapters,status,description
-## END Fanfic Library Easy Setup code
-
 ## [defaults] section applies to all formats and sites but may be
 ## overridden at several levels.  Example:
 
@@ -70,59 +64,7 @@ titlepage_entries: publisher,rating,warnings,ships,characters,category,genre,lan
 ## space.
 #grayscale_images: false
 
-
-## Most common, I expect will be using this to save username/passwords
-## for different sites.  Here are a few examples.  See defaults.ini
-## for the full list.
-
-[www.twilighted.net]
-#username:YourPenname
-#password:YourPassword
-## default is false
-#collect_series: true
-
-[ficwad.com]
-#username:YourUsername
-#password:YourPassword
-
-[www.adastrafanfic.com]
-## Some sites do not require a login, but do require the user to
-## confirm they are adult for adult content.
-#is_adult:true
-
-[www.twcslibrary.net]
-#username:YourName
-#password:yourpassword
-#is_adult:true
-## default is false
-#collect_series: true
-
-[www.fimfiction.net]
-#is_adult:true
-#fail_on_password: false
-
-[www.tthfanfic.org]
-#is_adult:true
-## tth is a little unusual--it doesn't require user/pass, but the site
-## keeps track of which chapters you've read and won't send another
-## update until it thinks you're up to date.  This way, on download,
-## it thinks you're up to date.
-#username:YourName
-#password:yourpassword
-
-ssword:yourpassword
-
-[archive.shriftweb.org]
-website_encodings:Windows-1252,utf8,iso-8859-1
-
-[archive.skyehawke.com]
-website_encodings:Windows-1252,utf8
-
-
-
-
-
-# The following section under the [archiveofourown.org] header
+# The following section
 # was adapted for the Easy Fanfic Library project.
 # Adapted from the plugin-defaults.ini file available on
 # the personal.ini tab of the FanFicFare plugin configuration.
@@ -139,6 +81,12 @@ website_encodings:Windows-1252,utf8
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+[defaults]
+## BEGIN Fanfic Library Easy Setup code 
+## This orders and lists the metadata on the file's title page in a similar order to the default listing on AO3 (for works downloaded from sites other than AO3).
+titlepage_entries: publisher,rating,warnings,ships,characters,category,genre,language,seriesHTML,datePublished,dateUpdated,dateCreated,numWords,numChapters,status,description
+## END Fanfic Library Easy Setup code
 
 [archiveofourown.org]
 use_basic_cache:true
