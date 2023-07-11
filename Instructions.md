@@ -116,9 +116,11 @@ This project makes use of existing tools (the Calibre application, FanFicFare pl
    * If you already have fanfic downloaded (not in Calibre), you can add those to Calibre using the "Add Books" options. To properly reformat their metadata: select the items, go to the FanFicFare dropdown menu, "Actions by Update Modes", "Update Existing FanFiction Books", and then "Update Calibre Metadata from Web Site".
    * Use the "Download from URLs" option under the FanFicFare drop-down menu.
    * Use the "Get Story URLs from Web Page" option under the FanFicFare drop-down menu.
-   * You can enter the URL of a creator's page of works in a particular fandom.
-   * You can enter the URL of a series page.
-   * You can enter the URL of your AO3 bookmarks page (assuming you put in your log-in info and uncommented the "always_login:true" option), though if you want to download all your bookmarks, you will need to enter each individual page from your bookmarks list separately. Note that this will likely not work for any series you have bookmarked; you will have to enter the URLs from the series pages individually.
+      * You can enter the URL of a series page.
+      * You can enter the URL of a creator's page of works, or their works in a particular fandom.
+      * You can enter the URL of your AO3 bookmarks or marked for later page (assuming you put in your log-in info and uncommented the "always_login:true" option). This will not work for any series you have bookmarked; you will have to enter the URLs from the series pages individually.
+      * Note that if you want to download all works from a list with multiple pages, such as your bookmarks or marked for later, you will need to enter each individual page from the list separately. 
+           * Alternatively, if you have many pages of bookmarks/marked-for-later and wish to avoid entering the URL for each individual page, [ao3downloader](https://github.com/nianeyna/ao3downloader) can handle multiple pages automatically. AO3downloader has an option to just retrieve links, so you can use it for that purpose, and then enter the list of URLs into the FanFicFare "Download from URLs" option to get the works into the library you set up with Easy Fanfic Library.
    * You can also download anthologies into a single EPUB from a web page (such as a series page) or a list of URLS. Check out "Anthology Options" under the FanFicFare drop-down menu. Note that the work will have some funky tags and metadata because it pulls from the info for every work in the anthology.
 7. For additional guidance, see the troubleshooting section.
 
