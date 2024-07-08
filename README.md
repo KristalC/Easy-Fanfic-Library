@@ -11,4 +11,8 @@ The Easy Fanfic Library is a sample Calibre library that users can download and 
 * The sample library has the Calibre plugin FanFicFare pre-installed. FanFicFare (<https://github.com/JimmXinu/FanFicFare/wiki/CalibrePlugin>) is what enables you to download fanfiction and metadata directly into Calibre (from URLs). The sample library pre-configures FanFicFare to send fanfiction metadata to the appropriate columns/fields.
 * The sample library has the Calibre plugin EpubMerge pre-installed. EpubMerge (<https://www.mobileread.com/forums/showthread.php?t=169744>) interfaces with the FanFicFare plugin and adds the option of downloading a group or series of works as a single EPUB anthology.
 
+Read the [Instructions](/Instructions.md) for a step-by-step explanation of how to implement the Easy Fanfic Library.
+
 To report any issues or give feedback on the Easy Fanfic Library, use the issues page or submit a response to this form: https://docs.google.com/forms/d/e/1FAIpQLSf-5YBJNzHvnJs1wXwYe_Xbb62HenymazdhayXuHX7FSn9a1g/viewform. 
+
+
