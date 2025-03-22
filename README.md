@@ -1,3 +1,5 @@
+Note: While this version of the project is functional, follow <https://codeberg.org/the_bi_ballerina/Easy-Fanfic-Library/> for the most up-to-date version.
+
 ## Easy Fanfic Library: Using Calibre & FanFicFare
 
 The Easy Fanfic Library project enables users to easily download works from AO3 and other fanfiction sites into a library in Calibre, a free e-book management application, with all the metadata (title, author, series, ratings, warnings, characters, relationships, additional tags, date posted, etc.) intact and in separate fields. This way you will be able to quickly download fanfiction and sort/filter downloaded works similarly to how you would filter on AO3 itself (including by your personal bookmark data and tags). This will work with fanfiction sites besides AO3, but the project was designed for AO3 works, and is optimized for the organization of AO3 works.
